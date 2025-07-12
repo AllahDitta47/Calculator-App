@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    overflow-y: auto;
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    color: #fff;
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.display {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 2em;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 15px;
+    font-size: 1.2em;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.operator {
+    background: linear-gradient(45deg, #007bff, #00c4ff);
+}
+
+.operator:hover {
+    background: linear-gradient(45deg, #0056b3, #0096cc);
+}
+
+.equals {
+    background: linear-gradient(45deg, #28a745, #34d058);
+    grid-column: span 1;
+}
+
+.equals:hover {
+    background: linear-gradient(45deg, #218838, #28a745);
+}
+
+.clear {
+    background: linear-gradient(45deg, #ff4d4d, #ff7878);
+}
+
+.clear:hover {
+    background: linear-gradient(45deg, #cc0000, #e60000);
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        max-width: 90%;
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.4em;
+    }
+    .display {
+        font-size: 1.5em;
+        padding: 10px;
+    }
+    .btn {
+        font-size: 1em;
+        padding: 12px;
+    }
+}
